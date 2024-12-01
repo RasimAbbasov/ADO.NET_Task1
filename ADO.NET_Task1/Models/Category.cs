@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace ADO.NET_Task1.Models
 {
-    internal class Product
+    internal class Category
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
         public List<ProductCategory> ProductCategories { get; set; }
         public override string ToString()
         {
-            return $"Id: {Id} Name: {Name} Price: {Price}";
+            return Id+ " " + Name ;
         }
     }
 }

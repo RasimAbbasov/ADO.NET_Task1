@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\services\\productdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:services\\productdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\models\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:models\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\models\\productdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:models\\productdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|c:\\users\\rasim\\source\\repos\\ado.net_task1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6929BA-FB8A-4988-8C8E-6905DEC95653}|ADO.NET_Task1.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "ProductCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\ProductCategory.cs",
+              "RelativeDocumentMoniker": "Models\\ProductCategory.cs",
+              "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\ProductCategory.cs",
+              "RelativeToolTip": "Models\\ProductCategory.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T09:52:00.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductDetailsService.cs",
+              "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Services\\ProductDetailsService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductDetailsService.cs",
+              "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Services\\ProductDetailsService.cs",
+              "RelativeToolTip": "Services\\ProductDetailsService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T09:40:28.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Services\\CategoryService.cs",
+              "RelativeToolTip": "Services\\CategoryService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T09:40:00.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T09:27:19.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductDetails.cs",
+              "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\ProductDetails.cs",
+              "RelativeDocumentMoniker": "Models\\ProductDetails.cs",
+              "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\ProductDetails.cs",
+              "RelativeToolTip": "Models\\ProductDetails.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAYwA8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T09:22:50.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Services\\ProductService.cs",
               "RelativeToolTip": "Services\\ProductService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEoAAAABAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAiwDsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T19:35:48.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
               "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T19:35:08.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Rasim\\source\\repos\\ADO.NET_Task1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T19:30:39.301Z",
               "EditorCaption": ""

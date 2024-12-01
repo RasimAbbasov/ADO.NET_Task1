@@ -6,10 +6,12 @@ namespace ADO.NET_Task1
     {
         static void Main(string[] args)
         {
-           ProductService productservice = new ProductService();
-            //productservice.Create(new() { Name = "Product1", Price = 25.99m });
+           //ProductService productservice = new ProductService();
+            //productservice.Create(new() { Name = "Product2", Price = 25.99m });
             //foreach (var product in productservice.ReadAll())
                 //Console.WriteLine(product);
+           ProductDetailsService productdetailsservice = new ProductDetailsService();
+            productdetailsservice.Create(new() { Quantity = "salam", ProductLink = "salam",ProductId=3});
 
         }
     }

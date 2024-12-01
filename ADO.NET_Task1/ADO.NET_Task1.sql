@@ -26,3 +26,4 @@ Quantity nvarchar(50),
 ProductLink nvarchar(50),
 ProductId int FOREIGN KEY REFERENCES Products(Id)
 )
+

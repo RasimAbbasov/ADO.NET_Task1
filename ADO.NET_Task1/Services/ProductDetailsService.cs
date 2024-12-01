@@ -8,62 +8,63 @@ using System.Threading.Tasks;
 
 namespace ADO.NET_Task1.Services
 {
-    internal class ProductService
+    internal class ProductDetailsService
     {
         const string connection = "Server=DESKTOP-Q262GML\\SQLEXPRESS01;Database=ProductManagementDB;Trusted_Connection=True;";
-        public void Create(Product product) 
+        public void Create(ProductDetails productDetails)
         {
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "INSERT INTO Products VALUES(@Name,@Price)";
-            SqlCommand sqlCommand= new SqlCommand(query, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@Name", product.Name);
-            sqlCommand.Parameters.AddWithValue("@Price", product.Price);
+            string query = "INSERT INTO ProductDetails VALUES(@Quantity,@ProductLink,@ProductId)";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@Quantity", productDetails.Quantity);
+            sqlCommand.Parameters.AddWithValue("@ProductLink", productDetails.ProductLink);
+            sqlCommand.Parameters.AddWithValue("@ProductId", productDetails.ProductId);
             sqlCommand.ExecuteNonQuery();
         }
-        public List<Product> ReadAll() 
+        public List<ProductDetails> ReadAll()
         {
-            List<Product> products = new List<Product>();
+            List<ProductDetails> productDetails = new List<ProductDetails>();
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "SELECT * FROM Products";
+            string query = "SELECT * FROM ProductDetails";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
-            if (reader.HasRows) 
+            if (reader.HasRows)
             {
-                while (reader.Read()) 
+                while (reader.Read())
                 {
 
-                 int id =(int)reader.GetValue(0);
-                 string name =(string)reader.GetValue(1);
-                 decimal price =(decimal)reader.GetValue(2);
-                    products.Add(new() { Id = id, Name = name, Price = price });
+                    int id = (int)reader.GetValue(0);
+                    string quantity = (string)reader.GetValue(1);
+                    string productLink = (string)reader.GetValue(2);
+                    productDetails.Add(new() { Id = id, Quantity = quantity, ProductLink = productLink });
                 }
-                return products;
+                return productDetails;
             }
             else
                 Console.WriteLine("Table has no rows");
-                return products;
+            return productDetails;
         }
-        public void UpdateById(int id,Product product) 
+        public void UpdateById(int id, ProductDetails productDetails)
         {
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "UPDATE Products SET Name=@Name,Price=@Price WHERE Id=@Id";
+            string query = "UPDATE ProductDetails SET Quantity=@Quantity,ProductLink=@ProductLink WHERE Id=@Id";
             SqlCommand sqlCommand = new SqlCommand(@query, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@Name", product.Name);
-            sqlCommand.Parameters.AddWithValue("@Price", product.Price);
             sqlCommand.Parameters.AddWithValue("@Id", id);
-            if(sqlCommand.ExecuteNonQuery()>0)
+            sqlCommand.Parameters.AddWithValue("@Quantity", productDetails.Quantity);
+            sqlCommand.Parameters.AddWithValue("@ProductLink", productDetails.ProductLink);
+            if (sqlCommand.ExecuteNonQuery() > 0)
                 Console.WriteLine("Updated");
             else
                 Console.WriteLine("Invalid progress");
         }
-        public void DeleteById(int id) 
+        public void DeleteById(int id)
         {
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "DELETE FROM Products WHERE Id=@Id";
+            string query = "DELETE FROM ProductDetails WHERE Id=@Id";
             SqlCommand sqlCommand = new SqlCommand(@query, sqlConnection);
             sqlCommand.Parameters.AddWithValue("@Id", id);
             if (sqlCommand.ExecuteNonQuery() > 0)
@@ -71,9 +72,9 @@ namespace ADO.NET_Task1.Services
             else
                 Console.WriteLine("Wrong id!");
         }
-        public static SqlConnection GetConnection(string connection) 
+        public static SqlConnection GetConnection(string connection)
         {
             return new SqlConnection(connection);
-        } 
+        }
     }
 }

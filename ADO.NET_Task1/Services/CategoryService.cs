@@ -8,62 +8,59 @@ using System.Threading.Tasks;
 
 namespace ADO.NET_Task1.Services
 {
-    internal class ProductService
+    internal class CategoryService
     {
         const string connection = "Server=DESKTOP-Q262GML\\SQLEXPRESS01;Database=ProductManagementDB;Trusted_Connection=True;";
-        public void Create(Product product) 
+        public void Create(Category category)
         {
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "INSERT INTO Products VALUES(@Name,@Price)";
-            SqlCommand sqlCommand= new SqlCommand(query, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@Name", product.Name);
-            sqlCommand.Parameters.AddWithValue("@Price", product.Price);
+            string query = "INSERT INTO Products VALUES(@Name)";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@Name", category.Name);
             sqlCommand.ExecuteNonQuery();
         }
-        public List<Product> ReadAll() 
+        public List<Category> ReadAll()
         {
-            List<Product> products = new List<Product>();
+            List<Category> categories = new List<Category>();
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "SELECT * FROM Products";
+            string query = "SELECT * FROM Categories";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
-            if (reader.HasRows) 
+            if (reader.HasRows)
             {
-                while (reader.Read()) 
+                while (reader.Read())
                 {
 
-                 int id =(int)reader.GetValue(0);
-                 string name =(string)reader.GetValue(1);
-                 decimal price =(decimal)reader.GetValue(2);
-                    products.Add(new() { Id = id, Name = name, Price = price });
+                    int id = (int)reader.GetValue(0);
+                    string name = (string)reader.GetValue(1);
+                    categories.Add(new() { Id = id, Name = name });
                 }
-                return products;
+                return categories;
             }
             else
                 Console.WriteLine("Table has no rows");
-                return products;
+            return categories;
         }
-        public void UpdateById(int id,Product product) 
+        public void UpdateById(int id,Category category)
         {
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "UPDATE Products SET Name=@Name,Price=@Price WHERE Id=@Id";
+            string query = "UPDATE Categories SET Name=@Name WHERE Id=@Id";
             SqlCommand sqlCommand = new SqlCommand(@query, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@Name", product.Name);
-            sqlCommand.Parameters.AddWithValue("@Price", product.Price);
+            sqlCommand.Parameters.AddWithValue("@Name", category.Name);
             sqlCommand.Parameters.AddWithValue("@Id", id);
             if(sqlCommand.ExecuteNonQuery()>0)
                 Console.WriteLine("Updated");
             else
-                Console.WriteLine("Invalid progress");
+                Console.WriteLine("Invalid progress");  
         }
-        public void DeleteById(int id) 
+        public void DeleteById(int id)
         {
             using var sqlConnection = GetConnection(connection);
             sqlConnection.Open();
-            string query = "DELETE FROM Products WHERE Id=@Id";
+            string query = "DELETE FROM Categories WHERE Id=@Id";
             SqlCommand sqlCommand = new SqlCommand(@query, sqlConnection);
             sqlCommand.Parameters.AddWithValue("@Id", id);
             if (sqlCommand.ExecuteNonQuery() > 0)
@@ -71,9 +68,9 @@ namespace ADO.NET_Task1.Services
             else
                 Console.WriteLine("Wrong id!");
         }
-        public static SqlConnection GetConnection(string connection) 
+        public static SqlConnection GetConnection(string connection)
         {
             return new SqlConnection(connection);
-        } 
+        }
     }
 }
